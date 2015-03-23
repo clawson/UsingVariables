@@ -16,7 +16,38 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    int feet = 5;
+    int inches = 9;
+    
+    int calculatedHeight = (feet * 12) + inches;
+    
+    float myWeight = 242.0;
+    
+    float myBMI = (myWeight / (calculatedHeight * calculatedHeight) * 703);
+    
+    NSLog(@"My BMI (using C variables) = %f", myBMI);
+    
+    
+    if (myBMI >= 35 && myBMI < 41) {
+        NSLog(@"Your BMI classifies you as 'severely obese'");
+    }
+    
+    
+    
+    
+    
+    CGFloat height = 71.0;
+    CGFloat weight = 185.0;
+    
+    CGFloat bodyMassIndex = (weight / (height * height) * 703);
+    
+    NSLog(@"BMI = %f", bodyMassIndex);
+
+    
+    
+    
+    
     return YES;
 }
 
